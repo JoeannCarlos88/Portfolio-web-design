@@ -1,40 +1,43 @@
+// src/pages/Experience.tsx
 import {
+  IonContent,
   IonPage,
   IonHeader,
   IonToolbar,
   IonTitle,
-  IonContent,
+  IonButtons,
+  IonMenuButton,
   IonCard,
+  IonCardHeader,
+  IonCardTitle,
   IonCardContent
 } from '@ionic/react';
 
-const Experience: React.FC = () => {
-  return (
-    <IonPage>
-      <IonHeader>
-        <IonToolbar>
-          <IonTitle>Experience</IonTitle>
-        </IonToolbar>
-      </IonHeader>
+const Experience: React.FC = () => (
+  <IonPage>
+    <IonHeader>
+      <IonToolbar>
+        <IonButtons slot="start">
+          <IonMenuButton />
+        </IonButtons>
+        <IonTitle>Experience</IonTitle>
+      </IonToolbar>
+    </IonHeader>
 
-      <IonContent className="ion-padding">
-        <IonCard>
-          <IonCardContent>
-            <h3>Sales Clerk</h3>
-            <p>Gaisano Mall</p>
-          </IonCardContent>
-        </IonCard>
-
-        <IonCard>
-          <IonCardContent>
-            <h3>Barangay Clerk</h3>
-            <p>Barangay Office</p>
-            <p>Also served as Barangay Sanitation Inspector</p>
-          </IonCardContent>
-        </IonCard>
-      </IonContent>
-    </IonPage>
-  );
-};
+    <IonContent className="ion-padding" style={{ background: '#f8f9fa' }}>
+      <IonCard>
+        <IonCardHeader>
+          <IonCardTitle>Experience</IonCardTitle>
+        </IonCardHeader>
+        <IonCardContent>
+          <ul>
+            <li>Sales Clerk at Gaisano</li>
+            <li>Barangay Clerk & Sanitation Inspector</li>
+          </ul>
+        </IonCardContent>
+      </IonCard>
+    </IonContent>
+  </IonPage>
+);
 
 export default Experience;
